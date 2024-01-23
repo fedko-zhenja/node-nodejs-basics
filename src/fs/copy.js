@@ -1,5 +1,5 @@
 const copy = async () => {
-    // Write your code here 
+    // my solution will be here
 };
 
 await copy();
