@@ -1,7 +1,10 @@
 import fs from 'fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const pathWrongFile = 'src/fs/files/wrongFilename.txt';
-const pathProperFile = 'src/fs/files/properFilename.md'; 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const pathWrongFile = path.join(__dirname, 'files', 'wrongFilename.txt');
+const pathProperFile = path.join(__dirname, 'files', 'properFilename.md'); 
 
 const rename = async () => {
     try {
