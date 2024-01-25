@@ -1,6 +1,9 @@
 import fs from 'fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 
-const pathFile = 'src/fs/files'; 
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const pathFile = path.join(__dirname, 'files'); 
 
 const list = async () => {
     try {
